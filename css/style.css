@@ -116,6 +116,13 @@ summary {
     max-width: 100%;
 }
 
+.table-container {
+    /* ↓↓↓ Sonst wird diese Tabelle im Hochformat nicht auf den Bildschirm passen. ↓↓↓*/
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+}
+
 summary:hover {
     color: var(--link-hov-color);
     cursor: pointer;
