@@ -117,10 +117,10 @@ summary {
 }
 
 .table-container {
-    /* ↓↓↓ Sonst wird diese Tabelle im Hochformat nicht auf den Bildschirm passen. ↓↓↓*/
-    overflow-x: auto;
+        /* ↓↓↓ Sonst wird diese Tabelle im Hochformat nicht auf den Bildschirm passen. ↓↓↓*/
+    /* overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    max-width: 100%;
+    max-width: 100%; */
 }
 
 summary:hover {
