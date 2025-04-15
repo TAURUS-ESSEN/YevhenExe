@@ -129,7 +129,7 @@
 }
 
 .close-photo:hover{
-  color:orange;
+  color: var(--additional-color)
 }
 
 .close-photo:before{
