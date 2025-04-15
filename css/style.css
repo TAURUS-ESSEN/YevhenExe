@@ -111,9 +111,9 @@ summary {
     font-weight: 600;
     color: var(--link-color);
     /* ↓↓↓ Sonst wird diese Tabelle im Hochformat nicht auf den Bildschirm passen. ↓↓↓*/
-    overflow-x: auto;
+    /* overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    max-width: 100%;
+    max-width: 100%; */
 }
 
 .table-container {
