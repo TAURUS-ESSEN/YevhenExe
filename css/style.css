@@ -83,6 +83,10 @@ h1,h2 {
     margin: 1rem 0;
 }
 
+h1 {
+    font-size: 2em;
+}
+
 main {
     padding: 1em;
 }
@@ -93,6 +97,8 @@ a{
     color:var(--link-color,inherit);
     /* min-height:var(--min-height, auto); */
 }
+
+
 
 a:hover{
     color:var(--link-hov-color);
@@ -325,10 +331,10 @@ li:hover > a, .hasSub:hover a::after {
     max-width: 250px;
     background-color: var(--primary-color);
     color:var(--white);
+    font-weight: 600;
     text-align: left;
     padding: 0.5em;
     border-radius: 5px;
-    font-weight: 100;
     position: absolute;
     bottom: 125%; 
     left: 50%;
@@ -555,6 +561,22 @@ button:hover, button:focus {
 
 .impressum address {
     font-style: normal;
+}
+
+ul.impressum {
+    padding-left: 1em;
+}
+
+.active-impressum {
+    background-color: var(--white);
+    background-image: url('../img/noise_lines.webp');
+    color: var(--primary-color);
+    height: 30px;
+    padding: 0 1em;
+}
+
+.active-impressum:hover {
+    color: var(--secondary-color);
 }
 
 /**** cars style ****/
