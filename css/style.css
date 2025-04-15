@@ -120,9 +120,9 @@ summary {
 
 .table-container {
     /* ↓↓↓ Sonst wird diese Tabelle im Hochformat nicht auf den Bildschirm passen. ↓↓↓*/
-    overflow-x: auto;
+    /* overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    max-width: 100%;
+    max-width: 100%; */
 }
 
 summary:hover {
@@ -384,13 +384,7 @@ img[src$=".gif"]{
     flex-direction: column;
 }
 
-.bio {
-    padding: 0 1em;
-    width: 60%;
-    width: 70%;
-}
-
-/**** Table ****/
+/****************   Table    ****************/
 table {
     border-collapse: collapse;
     margin: 0 auto;
@@ -422,7 +416,7 @@ tr.tr-active {
     color: var(--form-button-textcolor);
 }
 
-/****  KONTAKT SEITE  ****/
+/************  KONTAKT SEITE  ************/
 
 .kontakt {
     display: flex;
@@ -460,7 +454,7 @@ address {
     font-style: normal;
 }
 
-/**** FORM STYLES ****/
+/************ FORM STYLES ************/
 .form {
     max-width: 600px;
     margin: 0 auto;
@@ -546,7 +540,7 @@ button:hover, button:focus {
     background-color: var(--form-button-backgroundhover);
 }
 
-/**** Impressum ****/
+/************ Impressum ************/
 .impressum {
     padding: 1em;
 }
@@ -571,7 +565,7 @@ ul.impressum {
     color: var(--additional-color);
 }
 
-/**** cards style ****/
+/************ cards style ************/
 .cards-container {
     display: flex;
     flex-wrap: wrap;
@@ -619,7 +613,7 @@ ul.impressum {
     padding: 1em;
 }
 
- /****  Ersatz Slider ****/
+ /************  Ersatz Slider ************/
 
 .slider {
     position: relative;
@@ -643,7 +637,7 @@ ul.impressum {
     transform: translateX(-100%);
 }
 
-/* Fletches */
+/* Slider Fletches */
 .controls label {
     position: absolute;
     top: 50%;
@@ -692,8 +686,6 @@ ul.impressum {
 
 .figure-slider {
     display: flex;
-    /* flex-direction: column; */
-    /* align-items: center; */
     justify-content: start;
     width: 100%;
     height: 100%;
@@ -702,10 +694,6 @@ ul.impressum {
 
 .figure-slider img {
     width: 100%;
-    /* aspect-ratio: 3/2; */
-    /* height: auto; */
-    /* max-height: 100%; */
-    /* object-fit: contain; */
     display: block;
 }
 
@@ -730,7 +718,7 @@ ul.impressum {
 }
 
 
-/**** FOOTER  ****/
+/************ FOOTER  ************/
 footer {
     display: flex;
     justify-content: center;
@@ -774,7 +762,7 @@ footer a:hover {
     header {
         position: relative;
         flex-direction: row-reverse;
-}
+    }
 
     .logo {
         margin-right: 2rem;
@@ -797,7 +785,6 @@ footer a:hover {
     nav li  {
         border-bottom: 1px solid var(--white-color);
         width: 100%;
-        
     }
     
     nav li a, .hasSub a{
@@ -810,14 +797,12 @@ footer a:hover {
         width: 100%;
     }
 
-    .hasSub ul{
+    .hasSub ul {
         position: relative;
         border-top: 1px solid white;
         opacity: 1;
-        /* top:1em; */
         left:-1em;
         align-items: center;
-        /* padding:  0.1em 0; */
         background-color: var(--white-color);
         transform: translateY(0);
     }
@@ -831,7 +816,7 @@ footer a:hover {
         margin-left: 1em;
     }
 
-    nav > ul > li:hover > ul,  .hasSub ul:focus-within  {
+    nav > ul > li:hover > ul,  .hasSub ul:focus-within {
         top: 100%;
         left: -1rem;
         padding-top: 0rem;
@@ -848,30 +833,23 @@ footer a:hover {
         content: '\25B6';
         margin-right: 0.3em;
     }
- 
 
-  .kontakt {
-    flex-direction: column;
-  }
+    .kontakt {
+        flex-direction: column;
+    }
 
-  .w-60,
-  .w-40 {
-    width: 100% !important;
-  }
+    .w-60,
+    .w-40 {
+        width: 100% !important;
+    }
 
-  .kontakt-info {
-    margin-top: 2rem;
-  }
+    .kontakt-info {
+        margin-top: 2rem;
+    }
 }
- 
-
-
-
 
 @media (max-width: 480px) {
     .float-l, .float-r  {
         float: none;
     }
 }
-
- 
