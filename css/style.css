@@ -80,7 +80,7 @@ html {
 }
 
 h1,h2,h3,h4,h5,h6{
-    color:var(--header-color);
+    color:var(--secondary-color);
 }
 
 h1,h2 {
@@ -331,8 +331,8 @@ li:hover > a, .hasSub:hover a::after {
 .tooltip {
     position: relative;
     cursor: help;
-    color: var(--primary-color);
-    font-weight: 600;  
+    color: var(--secondary-color);
+    font-weight: 700;  
 }
 
   .tooltip-text {
