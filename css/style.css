@@ -11,7 +11,7 @@
 :root {
     --primary-color:#004766;
     --secondary-color: #C15106;
-    /* --additional-color: #df710b; */
+    --additional-color: #ff7b00; 
 
     /* --secondary-color: #c45f00; */
     /* --additional-color: #E8F9FF; */
@@ -43,7 +43,7 @@
     --transition-time: 0.5s;
 
     --form-element-border: var(--primary-color);
-    --form-element-focus: var(--secondary-color);
+    --form-element-focus: var(--additional-color);
     --form-button-background: var(--primary-color);
     --form-button-backgroundhover: var(--secondary-color);
     --form-button-textcolor: var(--white-color);
@@ -109,7 +109,7 @@ a:focus {
 }
 
 section a:focus {
-    color: var(--secondary-color);
+    color: var(--additional-color);
 }
 
 img {
@@ -208,7 +208,7 @@ label[for="menu-toggler"]:focus {
 }
 
 .logo a:hover {
-    color: var(--secondary-color);
+    color: var(--additional-color);
     font-size: 1.5em;
     text-decoration: none;
     transition: 0.5s;
@@ -299,7 +299,7 @@ nav > ul > li:hover > ul,  .hasSub ul:focus-within  {
 .hasSub>a::after {
     content: ' \25BC';
     margin-left: 0.2em;
-    color: var(--additional-color);
+    color: var(--white);
 }
 
 li.active {
@@ -350,7 +350,7 @@ li:hover > a, .hasSub:hover a::after {
   }
 
 span.tooltip:hover {
-    color: var(--secondary-color);
+    color: var(--additional-color);
 }
 
 .float-l {
@@ -411,7 +411,6 @@ table {
     border-collapse: collapse;
     margin: 0 auto;
     position: relative;
-    /* border: 1px solid var(--form-element-border); */
 }
 
 caption {
@@ -419,7 +418,7 @@ caption {
     font-size: 1.2em;
 }
 
-  th, td {
+th, td {
     border: 1px solid var(--form-element-border);
     padding: 0.2em;
     text-align: left;
@@ -460,13 +459,16 @@ tr.tr-active {
 .kontakt-info a, .kontakt-info h1{
     color: var(--white);
 }
+.kontakt-info a:hover {
+    color: var(--additional-color);
+}
 
 .kontakt-icons a{
     margin: 0.5rem;
 }
 
 a:hover svg {
-    fill: var(--secondary-color);
+    fill: var(--additional-color);
 }
 
 address {
@@ -524,6 +526,11 @@ button:focus-visible {
     outline-offset: 2px;     
 }
 
+a:focus-visible   {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+  }
+
 select:required:invalid {
     color: #495057; 
 }
@@ -576,7 +583,7 @@ ul.impressum {
 }
 
 .active-impressum:hover {
-    color: var(--secondary-color);
+    color: var(--additional-color);
 }
 
 /**** cars style ****/
@@ -650,7 +657,7 @@ footer a {
 }
 
 footer a:hover {
-    color: orange ;
+    color: var(--additional-color);
     transform: scale(1.05);
     text-decoration: underline;
 }
@@ -769,6 +776,15 @@ footer a:hover {
     font-size: 1em;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;   
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
 
 @media (max-width: 767px) {
     label[for="menu-toggler"] {
