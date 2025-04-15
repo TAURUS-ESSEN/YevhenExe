@@ -1,0 +1,388 @@
+/**
+/* Standardregelsätze */
+/***************************   
+/*   
+/* 
+Die hier angegeben Regelsätze ermöglichen es die wichtigsten Vorgaben aus einem Stylguide zu übernehmen und müssen mit jedem Projekt nur angepasst werden
+Layout spezifische Angaben (das spätere Design) wird in einem weiteren Stylesheet aufgebaut. 
+Ein späteres zusammenfassen der CSS-Dateien oder generelles einzelnes einbinden von mehreren CSS-Dateien ist jederzeit möglich.
+
+Das Zusammenführen von mehreren CSS-Dateien via:
+ @import url("dateiname.css");
+ @import url("dateiname-2.css");
+ usw. ist aus Performancegründen zu vermeiden.
+
+ Führen Sie bei kleineren Stylesheets (gesamt bis ca. 1500 Zeilen) alle Anweisungen in einer Datei zusammen. Bei größen Styleysheets rufen sie einfach alle benötigten Dateien im Kopf auf.
+/*  
+/*
+/**/
+
+/** Resetten*/ 
+
+/* *{margin:0;padding:0;}  */
+
+
+/**
+* Alternativen zum hardereset
+* http://meyerweb.com/eric/tools/css/reset/ - resetstylesheet 
+* http://necolas.github.io/normalize.css/ - normalisieren
+*/ 
+
+/* Boxmodell festlegen */
+html{box-sizing:content-box;}
+/* Hilfsklasse zum schnellen wechseln ggf. am html Element setzen */
+.border-box{box-sizing:border-box;}
+*,*:after,*:before{ box-sizing:inherit;}
+
+/* externe schrift importieren - kann ladezeit vergrößern besser mit @font-face lokal arbeiten */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+:root{
+/* Allgemeine Vorgaben und Einsatz Dokumentieren*/
+/*
+   ggf. für bessere Verständlichkeit noch sprechendere Variablen verwenden und diesen dann die allgemeinen Vorgaben zuweisen.
+*/
+  
+/* Beispiel Benamungsschema */
+
+/* 
+  --font-color:;
+  --primary-color:;
+  --secondary-color:; 
+*/
+/* Farben / Farbschemen ggf. auch gleich als klasse mit anlegen*/
+/* Farbschemen / Paletten*/ 
+/* --red-100:;
+  --red-90:;
+  --red-80:; 
+*/
+
+/* Beispiel Farbschemenklassen - Klassen dürfen nicht inenrhalb von :root deklariert werden! */
+/* 
+.red-100{
+  background-color:var(--red-100)
+}
+.text-red-100{
+  color:var(--red-100)
+} 
+*/
+
+
+/*##############################################
+/*#                                            #
+/*#  *********       Wichtig !       ********* #
+/*#                                            #
+/*#    unbefüllte variablen auskommentieren!   #
+/*#                                            #
+/*##############################################
+
+
+  /* Allgemein Styleguide Vorgaben sammeln */
+
+  /* Farbvorgaben sammeln */
+  /*first     second    third   fourth      bg        text  alt-text   a       a:hov
+  #344955 , #f9aa33 , #232f34, #4a6572, #e5e5e5 , #2e2e2e , #fff , #045fb4, #f9aa33
+  */
+  --color1:#000;/* dunkel*/
+  --color2:#222;/* halbdunkel */
+  --color3:#ffb31b;/* gelb*/
+  --color4:#fe6e00;/* orange */
+  --color5:#fff;/* #fff */
+  --color6:#fc5841;/*rot */
+  /* --color7:#fff;
+  --color8:#045fb4;
+  --color9:#f9aa33; */
+
+  /* Schriftarten*/
+  /* ggf. default Schriftfamilie in Variable zuweisen - als Beispiel am html-selektor verwendet*/
+  --default-font:sans-serif;
+  /* alternativ bei der Schriftzuweisung an den Elementvariablen - häufiger gewählte variante*/
+  /* --page-font:var(--font1, sans-serif); */
+  --font1:Verdana, Geneva, Tahoma, sans-serif;
+  --font2:'Crimson Text', serif;
+
+  /*
+  /*### Bereichsvariablen ###
+  /* Individuelle Bereiche mit Variablen-, bzw. Wertzuweisung */
+
+  /* HTML*/
+  /***********************/
+  --page-bg:var(--color1);
+  --page-text:var(--color5);
+  --page-line:1.3;
+  --page-text-size:100.01%;
+  --page-font:var(--font1);
+  
+  /* Überschriften Allgemein*/
+  /***********************/
+  /* --headline-color */
+  --heading-color:var(--color3);
+  --heading-font:var(--font2);
+
+
+  /* Überschriften individuell */
+  /* h1 */
+  /***********************/
+  --heading1-color:var(--color5);
+  /* --heading1-font:Arial,sans-serif; */
+  --heading1-text-size:2em;
+    
+  /* Standardwert Browserstylsheet - Werte wurden als default gesetzt */
+  /* 
+  vertikale margins nur ändern wenn der Wert laut Stylguidevorgabe festegelegt ist oder mit reset gearbeitet wird ->  dann kommentar entfernen 
+  */
+  /* 
+  --heading1-mar-top:0.67em;
+  --heading1-mar-bot:0.67em; 
+  */
+
+  /* h2 */
+  /***********************/
+  /* --heading2-font:Verdana; */
+  /* --heading2-color:blue; */
+  /* --heading2-text-size:50px; */
+  /* 
+  --heading2-mar-top:0.83em;
+  --heading2-mar-bot:0.83em; 
+  */
+
+  /* h3*/
+  /***********************/
+  /* --heading3-font:Verdana; */
+  --heading3-color:var(--color6);
+  /* --heading3-text-size:1.17em; */
+
+  /* 
+  --heading3-mar-top:1em;
+  --heading3-mar-bot:1em; 
+  */
+
+  /* h4*/
+  /***********************/
+  /* --heading4-font:Verdana; */
+  --heading4-color:var(--color4);
+  /* --heading4-text-size:1em; */
+ 
+  /* 
+  --heading4-mar-top:1.33em;
+  --heading4-mar-bot:1.33em; 
+  */
+
+  /* h5*/
+  /***********************/
+  /* --heading5-font:Courier; */
+  /* --heading5-color:teal; */
+  /* --heading5-text-size:0.83em; */
+  
+  /* 
+  --heading5-mar-top:1.67em;
+  --heading5-mar-bot:1.67em; 
+  */
+
+   /* h6*/
+  /***********************/
+  /* --heading6-font:Times; */
+  /* --heading6-color:brown; */
+  /* --heading6-text-size:0.67em; */
+  
+  /* 
+  --heading6-mar-top:2.33em;
+  --heading6-mar-bot:2.33em; 
+  */
+
+  /* Individuelle Listenpunkte - wenn genutzt immer mit Wert versehen!*/
+  /* UL */
+  /* --unordered-list-style:circle;  */
+  /* OL */
+  /* --ordered-list-style:decimal;  */
+
+  
+  /* Interaktive Elemente */
+  /* anker */ 
+  /* Textlinks */
+  /***********************/
+ 
+  --link-bg:none;
+  --link-decoration:underline;
+  --link-color:var(--color3);
+  /* --min-height:40px; */
+
+  /* zustände hover/focus*/
+
+  /* --link-hov-bg:orange; */
+  --link-hov-decoration:none;
+  --link-hov-color:var(--color6);
+
+
+}
+
+
+html{
+   background:var(--page-bg, #f3f3f3);
+   color:var(--page-text,#333);
+   font-family:var(--page-font,var(--default-font));
+   line-height:var(--page-line, 1.15);
+   font-size:var(--page-text-size);
+}
+
+/* body{} */
+
+h1,h2,h3,h4,h5,h6{
+  color:var(--heading-color);
+  font-family:var(--heading-font);
+}
+
+h1{
+  
+  font-family:var(--heading1-font, var(--heading-font));
+  /* Standardwert Browserstylesheet wurde als default gesetzt */
+  font-size:var(--heading1-text-size,2em);
+  color:var(--heading1-color, var(--heading-color)) ;
+  /* Standardwert Browserstylesheet wurde als default gesetzt */
+  /* margin-block-start: */
+  margin-top:var(--heading1-mar-top, 0.67em);
+  /* margin-block-end:;*/
+  margin-bottom:var(--heading1-mar-bot, 0.67em);
+  /* logical properties wie z.B. margin-,padding-(inline-start,block-start,inline-end,block-end) reagieren auf reverse-Eigenschaften von flex&grid bzw. auf Lesefluss Eigenschaften (direction, text-orientation und writing-mode) und Attribute (dir)
+  */
+}
+
+h2{
+  font-family:var(--heading2-font,var(--heading-font));
+  font-size:var(--heading2-text-size, 1.5em);
+  color:var(--heading2-color , var(--heading-color));
+  /* Standardwert Browserstylsheet - werte wurden als default gesetzt */
+  margin-top:var(--heading2-mar-top,.83em);
+  margin-bottom:var(--heading2-mar-bot,.83em);
+}
+
+h3{  
+  font-family:var(--heading3-font,var(--heading-font));
+  font-size:var(--heading3-text-size, 1.17em);
+  color:var(--heading3-color , var(--heading-color));
+  /* Standardwert Browserstylsheet - werte wurden als default gesetzt */
+  margin-top:var(--heading3-mar-top, 1em);
+  margin-bottom:var(--heading3-mar-bot, 1em);
+}
+
+h4{
+  font-family:var(--heading4-font,var(--heading-font));
+  font-size:var(--heading4-text-size, 1em);
+  color:var(--heading4-color , var(--heading-color));
+  /* Standardwert Browserstylsheet - werte wurden als default gesetzt */
+  margin-top:var(--heading4-mar-top, 1.33em);
+  margin-bottom:var(--heading4-mar-bot, 1.33em);
+}
+h5{
+  font-family:var(--heading5-font,var(--heading-font));
+  font-size:var(--heading5-text-size, 0.83em);
+  color:var(--heading5-color , var(--heading-color));
+  /* Standardwert Browserstylsheet - werte wurden als default gesetzt */
+  margin-top:var(--heading5-mar-top, 1.67em);
+  margin-bottom:var(--heading5-mar-bot, 1.67em);
+}
+
+h6{
+  font-family:var(--heading6-font,var(--heading-font));
+  font-size:var(--heading6-text-size, 0.67em);
+  color:var(--heading6-color , var(--heading-color));
+  /* Standardwert Browserstylsheet - werte wurden als default gesetzt */
+  margin-top:var(--heading6-mar-top, 2.33em);
+  margin-bottom:var(--heading6-mar-bot, 2.33em);
+}
+/* Außenabstände*/
+p{}
+
+/* List-style/position/padding*/
+/* LIsten */
+/* Beispiel generell Listenpunkte und Einrückung entfernen und nur Layoutspezifisch in weiterer CSS-Datei setzen*/
+ul,ol{
+  list-style:none;
+  padding:0; 
+}
+
+/* Alternativ individuell*/
+/* ul{
+  list-style:var(unordered-list-style);
+}
+ol{
+  list-style:var(ordered-list-style);
+} 
+*/
+
+/* Listenpunkte und einrückung nur innerhalb der nav entfernen */
+/* 
+nav ul,
+nav ol{
+  list-style:none;
+  padding:0;
+} 
+*/
+
+
+/* Bilder */
+img{
+  display:inline-block;
+  /* background:red; */
+  /* ggf. hintergrund mit hilfsvariable setzen alternativ textfarbe*/
+}
+
+/* Hintergrundfarbe entfernen wenn Transparentes Grafikformat genutzt wird */
+img[src$=".png"],
+img[src$=".gif"]{
+  background:none;
+}
+
+/* verlinkte Touchicons*/
+a img{
+  min-width:48px;
+  min-height:48px;
+}
+
+/* interaktive Elemente */
+a{
+  display:inline-block;
+  background:var(--link-bg, none);
+  text-decoration:var(--link-decoration, underline);
+  color:var(--link-color,inherit);
+  min-height:var(--min-height, auto);
+}
+
+a:hover,a:focus{
+  background:var(--link-hov-bg);
+  text-decoration:var(--link-hov-decoration);
+  color:var(--link-hov-color);
+}
+
+input,textarea,select{
+/* padding, width, min-width, Rahmen, Textfarbe,background */
+}
+
+input:hover,textarea:hover,select:hover{
+  /* Rahmen, Textfarbe,background*/
+}
+
+input:focus,textarea:focus,select:focus{
+  /* Rahmen, Textfarbe,background */
+  /* outline:0; */
+}
+
+/* input:focus-visible,Textarea:focus-visible{
+  outline:2px solid currentcolor;
+} */
+
+[type="radio"],[type="checkbox"]{
+  width:auto;
+}
+
+/* sendebuttons */
+[type="submit"],button{}
+[type="submit"]:hover,button:hover{}
+[type="submit"]:focus,button:focus{}
+
+
+/* Call2Action - Elemente */
+.btn{
+  display:inline-block;
+  /* ggf. hintergrundfarbe, textfarbe, schriftfamilie und schriftgröße */
+}
+.btn:focus,.btn:hover{}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Projekt Yevhen.exe - Kontakt seite</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <input type="checkbox" id="menu-toggler">
+            <label for="menu-toggler" role="button" tabindex="0">
+                <span class="open">☰ </span>
+                <span class="close">☰</span>
+            </label>
+            <div class="logo">
+                <a href="index.html" title="Yevhen.exe Projekt">&gt;_ Yevhen.exe █</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" title="Home">Home</a></li>
+                    <li class="hasSub"><a href="heute.html" title="Heute">Heute </a>
+                        <ul>
+                            <li><a href="heute.html#deutsch" title="Deutsch">Deutsch</a></li>
+                            <li><a href="heute.html#weiterbildung" title="Weiterbildung">Weiterbildung</a></li>
+                            <li><a href="heute.html#odin" title="Odin Projekt">Odin Projekt</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="zukunft.html" title="Zukunft">Zukunft</a></li>
+                    <li  class="active"><a href="kontakt.html" title="Kontakt" aria-current="page">Kontakt</a></li>
+                </ul>
+            </nav>
+        </header>
+    <main >
+            <section class="kontakt">
+        <div class="width60">
+            <form action="#" class="form">
+                <fieldset class="flex-column">
+                    <legend>Kontaktformular</legend>
+                    <label for="nachname">Nachname</label>
+                    <input type="text" name="nachname" id="nachname" autocomplete="family-name" minlength="1" maxlength="40"  required>
+                    <label for="vorname">Vorname</label>
+                    <input type="text" name="vorname" id="vorname" autocomplete="given-name" minlength="1" maxlength="40" >
+                    <label for="grund">Grund der Nachricht</label>
+                    <select name="grund" id="grund" required >
+                        <option value="" disabled selected hidden>-- Bitte auswählen --</option>
+                        <optgroup label="Ich brauche was">
+                            <option value="geldbitten">Geld (nur ein bisschen… oder mehr)</option>
+                            <option value="rat">Weisen Rat (am besten kostenlos)</option>
+                        </optgroup>
+                        <optgroup label="Ich weiß was besser">
+                            <option value="geldgeben">Geld geben (warum auch nicht?)</option>
+                            <option value="vorschlag2">Unerbetener Vorschlag</option>
+                        </optgroup>
+                    </select>
+                    <label for="nachricht">Nachricht (max. 300 Zeichen)</label>
+                    <textarea name="nachricht" id="nachricht" rows="6"  placeholder="Geben Sie bitte Ihre Nachricht ein" minlength="3" maxlength="300" required></textarea>
+                    <button aria-label="Formular absenden" type="submit">Senden</button>
+                </fieldset>
+            </form>    
+        </div>
+        <div class="width40 kontakt-info">
+            <h1> Kontakt Info</h1>
+            <div> 
+                <p>
+                    E-Mail: <a href="mailto:reitarovea@gmail.com">reitarovea@gmail.com</a><br>
+                    Telefon: <a href="tel:+491604514509">+49 160 45 145 09</a>
+                </p>
+                <address>
+                Eugen Reitarov<br>
+                Brüninghover Weg 30<br>
+                45307 Essen<br>
+                Deutschland
+                </address>
+            </div> 
+            <div class="kontakt-icons">
+                <a href="https://github.com/TAURUS-ESSEN" target="_blank" aria-label="GitHub-Profil">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="white" viewBox="0 0 24 24" role="img">
+                        <title>GitHub</title>
+                        <path d="M12 0.297c-6.63 0-12 5.373-12 12 
+                        0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 
+                        0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61
+                        -.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.084-.729.084-.729 
+                        1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.495.998 
+                        .108-.776.418-1.305.762-1.605-2.665-.3-5.467-1.332-5.467-5.93 
+                        0-1.31.467-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 
+                        0 0 1.005-.322 3.3 1.23a11.5 11.5 0 0 1 3-.405c1.02.005 2.045.138 3 .405 
+                        2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176 
+                        .765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92 
+                        .42.36.81 1.096.81 2.21 0 1.595-.015 2.88-.015 3.27 
+                        0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297 
+                        c0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="44" fill="white" height="44" viewBox="0 0 24 24">
+                    <title>LinkedIn</title>
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.024-3.041-1.854-3.041-1.854 
+                    0-2.138 1.447-2.138 2.941v5.669H9.347V9h3.414v1.561h.049c.476-.9 
+                    1.637-1.848 3.368-1.848 3.6 0 4.267 2.368 4.267 5.452v6.287zM5.337 
+                    7.433c-1.144 0-2.07-.928-2.07-2.071 0-1.144.926-2.07 
+                    2.07-2.07s2.07.926 2.07 2.07c0 1.143-.926 2.071-2.07 
+                    2.071zM6.812 20.452H3.862V9h2.95v11.452zM22.225 
+                    0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 
+                    24 1.771 24h20.451C23.2 24 24 23.226 24 
+                    22.271V1.729C24 .774 23.2 0 22.222 0z"/>
+                    </svg>
+                </a>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="44" fill="white" height="44" viewBox="0 0 24 24">
+                    <title>Twitter</title>
+                    <path d="M24 4.557a9.83 9.83 0 0 1-2.828.775 
+                    4.932 4.932 0 0 0 2.165-2.724 9.865 9.865 0 0 
+                    1-3.127 1.195 4.916 4.916 0 0 0-8.38 4.482A13.94 
+                    13.94 0 0 1 1.671 3.15a4.916 4.916 0 0 0 1.523 
+                    6.574 4.902 4.902 0 0 1-2.229-.616c-.054 
+                    2.281 1.581 4.415 3.949 4.89a4.935 4.935 
+                    0 0 1-2.224.084 4.919 4.919 0 0 0 4.588 
+                    3.417A9.867 9.867 0 0 1 0 19.54a13.94 
+                    13.94 0 0 0 7.548 2.212c9.056 0 14.01-7.496 
+                    14.01-13.986 0-.21-.005-.423-.014-.634A10.012 
+                    10.012 0 0 0 24 4.557z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>      
+    <p>© <time datetime="2025">2025</time> Yevhen Reitarov. Alle Rechte vorbehalten. 
+        <a href="impressum.html" title="Impressum">Impressum</a>
+    </p>
+</footer>
+</div>
+</body>
+</html>

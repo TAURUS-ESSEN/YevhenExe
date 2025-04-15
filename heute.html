@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Projekt Yevhen.exe - Heutige Situation</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <input type="checkbox" id="menu-toggler">
+            <label for="menu-toggler" role="button" tabindex="0">
+                <span class="open">☰ </span>
+                <span class="close">☰</span>
+            </label>
+            <div class="logo"><a href="index.html" title="Yevhen.exe Projekt">&gt;_ Yevhen.exe █</a></div>
+        <nav>
+            <ul>
+                <li><a href="index.html" title="Home">Home</a></li>
+                <li class="active hasSub" title="Heute Page"><a href="heute.html" aria-current="page">Heute</a>
+                    <ul>
+                        <li><a href="heute.html#deutsch" title="Deutsch">Deutsch</a></li>
+                        <li><a href="heute.html#weiterbildung" title="Weiterbildung">Weiterbildung</a></li>
+                        <li><a href="heute.html#odin" title="Odin Project">Odin Projekt</a></li>
+                    </ul>
+                </li>
+                <li><a href="zukunft.html" title="Zukunft">Zukunft</a></li>
+                <li><a href="kontakt.html" title="Kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="deutsch">
+            <div class="clearfix">
+                <h2>Deutsch lernen – der tägliche Versuch</h2>
+                <img  src="./img/deutsch.jpg" width="320"  height="150" class="float-l" alt="Deutsch lernen">
+            <p>
+                Ich lerne Deutsch – mit dem ehrlichen Ziel, mich eines Tages in diese Gesellschaft zu integrieren.  
+                Die Theorie ist klar: Wer Deutsch spricht, gehört irgendwann dazu. </p> <p>
+                In der Praxis stellt sich heraus: Jedes Bundesland spricht sein ganz eigenes Deutsch.  
+                Was man in Essen lernt, klingt in Bayern schon wie ein Dialektkurs für Fortgeschrittene.  
+                Aber ich gebe nicht auf – notfalls lerne ich einfach 16 Varianten gleichzeitig. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, itaque.otfalls lerne ich einfach 16 Varianten gleichzeitig.
+            </p>
+            </div>
+        </section>
+
+        <section id="weiterbildung">
+            <div class="clearfix">
+                <h2>Weiterbildung bei WBS Training</h2>
+                <img  src="./img/WBS.png" width="300" height="100" class="float-r" alt="Weiterbuildung mit WBS">
+                <p class="flex">
+                    Derzeit nehme ich an einer Weiterbildung bei WBS Training teil – ein intensiver Kurs, der mir zeigen soll, wie Softwareentwicklung funktioniert.
+                    Man sagt, am Ende könne man sogar eigene Projekte umsetzen. Wenn ich also irgendwann diese Seite hier komplett verstehe und selbst geschrieben habe, 
+                    dann besteht tatsächlich die leise Hoffnung, dass ich bald arbeiten darf. Vielleicht sogar als Entwickler. Aber wir wollen den Code mal nicht vor dem Deployment loben.
+                </p>
+            </div>
+            <details>
+                <summary>Modulübersicht der Weiterbildung</summary>
+                <table class="weiterbuildung">
+                    <caption>Alle Themenbereiche im Kurs</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Bausteinbezeichnung</th>
+                            <th scope="col">Von</th>
+                            <th scope="col">Bis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Softwareentwicklung mit HTML5 - Foundation</td>
+                            <td>06.03.2025</td>
+                            <td>19.03.2025</td>
+                        </tr>
+                        <tr class="strike-animated">
+                            <td>Softwareentwicklung mit HTML5 - GUI-Konzepte</td>
+                            <td>20.03.2025</td>
+                            <td>02.04.2025</td>
+                        </tr>
+                        <tr class="tr-active" aria-current="location" title="Ich bin gerade da">
+                            <td> Softwareentwicklung mit HTML5 - Bootstrap Framework  </td>
+                            <td>03.04.2025</td>
+                            <td>16.04.2025</td>
+                        </tr>
+                        <tr>
+                            <td>JavaScript - Foundation</td>
+                            <td>17.04.2025</td>
+                            <td>05.05.2025</td>
+                        </tr>
+                        <tr>
+                            <td>JavaScript mit JQuery und JS-Frameworks</td>
+                            <td>06.05.2025</td>
+                            <td>19.05.2025</td>
+                        </tr>
+                        <tr>
+                            <td>Photoshop </td>
+                            <td>20.05.2025</td>
+                            <td>03.06.2025</td>
+                        </tr>
+                        <tr>
+                            <td>UI/UX-Design</td>
+                            <td>04.06.2025</td>
+                            <td>18.06.2025</td>
+                        </tr>
+                        <tr>
+                            <td>Softwareentwicklung mit PHP - Foundation</td>
+                            <td>20.06.2025</td>
+                            <td>03.07.2025</td>
+                        </tr>
+                        <tr>
+                            <td>Softwareentwicklung mit PHP - Datenstrukturen</td>
+                            <td>04.07.2025</td>
+                            <td>17.07.2025</td>
+                        </tr>
+                        <tr>
+                            <td>Softwareentwicklung mit PHP - Framework Laravel  </td>
+                            <td>18.07.2025</td>
+                            <td>31.07.2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </details>
+        </section>
+        
+        <section id="odin">
+            <div class="clearfix">
+                <h2>Mein persönlicher Odin</h2>
+                <img src="./img/odin.png" alt="Odin Projekt" width="320" height="100" class="float-l">
+                <p>
+                    Ich habe so lange auf die Genehmigung meiner Weiterbildung gewartet,  
+                    dass ich angefangen habe, nach frei zugänglichen Alternativen zu suchen.  
+                    The <a href="https://www.theodinproject.com/" target="_blank" title="Odin Projekt Link">Odin Project</a> verspricht, dich vom absoluten Anfänger bis zum digitalen Nomaden zu bringen –  
+                    idealerweise mit Laptop am Strand, während du ein paar entspannte Requests tippst.  
+                    Ich mache das Ganze allerdings im Hardcore-Modus:  
+                    Wer braucht schon nur HTML, CSS und JS, wenn man parallel deutsche Grammatik büffelt  
+                    und sich durch eine Weiterbildung kämpft?  
+                    <strong>Deutsch + Weiterbildung + Odin = das wahre Combo.</strong> Meine letzte Projekte, die ich habe schon gemacht &darr;&darr;&darr;
+                </p>
+            </div>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="./img/stone-scissors-paper.jpg" width="320" height="170" alt="Rock-Scheere-Papier Spiel" />
+                    <div class="card-info">
+                        <h3>Rock-Scheere-Papier Spiel</h3>
+                        <p>Mein bestes Projekt mit 0% Logik, 100% Zufall.
+                            Und trotzdem bin ich stolz.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./img/dashboard-layout.jpg" width="320" height="170" alt="Dashboard Layout" />
+                    <div class="card-info">
+                        <h3>Dashboard Layout</h3>
+                        <p>Visuelle Ordnung.
+                            Was sich aber unter der Haube mit ARIA und Responsivität abspielt – bleibt ein gut gehütetes Geheimnis..</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./img/mycalc.jpg" width="320" height="170" alt="Calculator Project" />
+                    <div class="card-info">
+                        <h3>Calculator Projekt</h3>
+                        <p> Funktioniert wie ein normaler Taschenrechner. Nur hübscher als der in Windows.
+                            Aber das Ergebnis sollte man lieber nachprüfen – sicher ist sicher.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./img/todo.jpg" width="320" height="170" alt="Todo Project" />
+                    <div class="card-info">
+                        <h3>Todo Projekt</h3>
+                        <p> Aufgabenliste – scheint zu funktionieren.
+                            Jetzt weiß ich zumindest, wie localStorage funktioniert</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="./img/tictactoe.jpg" width="320" height="170" alt="TicTacToe Project" />
+                    <div class="card-info">
+                        <h3>Tic-Tac-Toe Projekt</h3>
+                        <p> Algorithmus lief, ich war stolz.
+                            KI getestet – bessere Lösung, halb so lang, doppelt so sauber.
+                            Stimmung im Keller.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./img/anmeldungform.jpg" width="320" height="170" alt="Anmeldung Form" />
+                    <div class="card-info">
+                        <h3>Anmeldung Form JS Validation</h3>
+                        <p> Die Validierung funktioniert.
+                            Aber die Magie verschwindet, sobald man Inspect → Console kennt.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>      
+        <p>© <time datetime="2025">2025</time> Yevhen Reitarov. Alle Rechte vorbehalten. 
+            <a href="impressum.html" title="Impressum">Impressum</a>
+        </p>
+    </footer>
+</div>
+</body>
+</html>

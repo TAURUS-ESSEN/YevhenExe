@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./css/gallery.css"> -->
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Projekt Yevhen.exe - Mögliche Zukunft</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <input type="checkbox" id="menu-toggler">
+            <label for="menu-toggler" role="button" tabindex="0">
+                <span class="open">☰ </span>
+                <span class="close">☰</span>
+            </label>
+            <div class="logo"><a href="index.html" title="Yevhen.exe Projekt">&gt;_ Yevhen.exe █</a></div>
+        <nav>
+            <ul>
+                <li><a href="index.html" title="Home">Home</a></li>
+                <li class="hasSub"><a href="heute.html" title="Heute">Heute</a>
+                    <ul>
+                        <li><a href="heute.html#deutsch" title="Deutsch">Deutsch </a></li>
+                        <li><a href="heute.html#weiterbildung" title="Weiterbildung">Weiterbildung</a></li>
+                        <li><a href="heute.html#odin" title="Odin Project">Odin Projekt</a></li>
+                    </ul>
+                </li>
+                <li class="active"><a href="zukunft.html" aria-current="page" title="Zukunft">Zukunft</a></li>
+                <li><a href="kontakt.html" title="Kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Ein bisschen uber meine Plane</h1>
+            <p>
+                Viele denken, Programmieren sei wie im Hackerfilm: schwarzer Bildschirm, blinkende Zahlen, Prozentanzeige beim Hack – und danach fährt der Held mit der Ferrari nach Hause, um seine Millionen zu verjubeln.</p>
+                <p>
+                    Die Realität? Sitzarbeit. Stundenlang. Der Rücken schmerzt, die Augen sind vom Koffein so geweitet wie die von Mickey Mouse.  </p>
+            <div class="slider">
+                <input type="radio" name="switch" id="slide1" checked>
+                <input type="radio" name="switch" id="slide2">
+                <div class="slides">
+                    <div class="slide">
+                        <figure class="figure-slider">
+                            <img src="./img/erwartungen.jpg" alt="Erwartungen">
+                            <figcaption>🏝️ Erwartungen: So stelle ich mir meine Arbeit in IT in ein paar Jahren vor</figcaption>
+                        </figure>
+                    </div>
+                    <div class="slide">
+                        <figure class="figure-slider">
+                            <img src="./img/realitat.jpg" alt="Realität">
+                            <figcaption> und Erfahrung ...so habe ich in IT früher gearbeitet 😄</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="controls">
+                    <label for="slide2" class="next">&#10095;</label>
+                    <label for="slide1" class="prev">&#10094;</label>
+                </div>
+            </div>
+            <div>
+                <p>
+                Deshalb habe ich in meinem Leben immer wieder die Chance genutzt, der IT zu entkommen. Und ich habe oft neu angefangen. Aber jedes Mal wird’s ein bisschen schwerer – <strong>und die Anzahl der Versuche ist leider nicht unbegrenzt</strong>. Um in einem Beruf wirklich gut zu werden, braucht man mindestens fünf Jahre harter Arbeit. Darum sage ich mir diesmal: Das ist die Endstation. Ich bleibe. Wirklich.</p>
+                <p>
+                Und trotzdem: Die Idee vom <span class="tooltip">digitalen Nomadentum 
+                    <span class="tooltip-text">Arbeiten am Strand, Kaffee in der Hand, WLAN vom Nachbarn – so lebt der digitale Nomade. Heute Bali, morgen Alpenhütte (gibt es dort eigentlich Strom?). Hauptsache: keine Meetings vor 11.</span>
+                </span>lässt mich nicht los. Arbeiten und dabei die Welt sehen? Klingt besser als ein Leben zwischen Bildschirm und Rückenschmerzen. In ein paar Jahren geht meine Tochter zur Uni – perfekte Gelegenheit, den Rucksack zu packen und irgendwo am Meer weiter zu coden.</p>
+            </div>
+            <div>
+                <figure>
+                    <!-- <figcaption>CSS-Lightbox</figcaption> -->
+                    <ul>
+                      <li>
+                        <a href="#img4" id="img4"><img src="./img/deutsch.jpg" alt="Auto auf Straße" width="202" height="135"></a>
+                        <div class="overlay"><!-- Überlagert den kompletten Inhalt-->
+                          <a href=""></a><!--Anker zum schließen wenn in Freiraum des Overlays geklickt wird-->
+                          <div class="imgholder"><!-- Container für anordnung von groß dargestelltem Bild-->
+                            <img src="./img/deutsch.png" alt="Auto auf Straße">
+                            <a href="" class="close">schließen</a> <!--sichtbares schließen Symbol -->
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <a href="#img5" id="img5"><img src="./img/deutsch.jpg" alt="Preistafel" width="202" height="135"></a>
+                        <div class="overlay">
+                          <a href=""></a>
+                          <div class="imgholder">
+                            <img src="./img/deutsch.png" alt="Auto auf Straße">
+                            <a href="" class="close">schließen</a>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </figure>
+            </div>
+        </section>
+        
+    </main>
+    <footer>      
+        <p>© <time datetime="2025">2025</time> Yevhen Reitarov. Alle Rechte vorbehalten. 
+            <a href="impressum.html" title="Impressum">Impressum</a>
+        </p>
+    </footer>
+</div>
+</body>
+</html>
