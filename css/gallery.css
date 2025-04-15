@@ -55,8 +55,8 @@
 
 .gallery img{
   /* background:red; */
-  min-height:48px;
-  min-width:48px; 
+  min-height:44px;
+  min-width:44px; 
   display:inline-block;
   border-radius: 10px ;
   /* box-shadow: 0 0 5px var(--shadow-mountain); */
@@ -119,8 +119,8 @@
 .close-photo{
   background:#000;
   color:#fff;
-  width:48px;
-  height:48px;
+  width:44px;
+  height:44px;
   position:absolute;
   right:-60px;
   top:-10px;
@@ -137,6 +137,18 @@
   text-align:center;
   content:"X";
   display:block;
-  font-size:48px;
-  line-height:48px;
+  font-size:44px;
+  line-height:44px;
+}
+
+@media (max-width: 480px) { 
+  .imgholder {
+    /* width: clamp(14em, 16em, 18em); */
+    width: 19em;
+  }
+
+  .close-photo {
+    right:-2.8em;
+    top:-1.4em;
+  }
 }

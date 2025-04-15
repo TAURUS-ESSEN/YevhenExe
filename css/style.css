@@ -10,12 +10,13 @@
 
 :root {
     /* --primary-color:#004766; */
-    --primary-color:#004766;
+    --primary-color:#494e51;
     --secondary-color: #A30072;
     /* --secondary-color: #C15106; */
 
-    --additional-color: #ff7b00; 
-
+    /* --additional-color: #ff7b00;  */
+    --additional-color: #35D1F8; 
+    /* --additional-color: #8dfaf4;  */
     /* --secondary-color: #c45f00; */
     /* --additional-color: #E8F9FF; */
     --white-color: #fff;
@@ -41,12 +42,12 @@
     --black: #000;
     --white: #fff;
 
-    --link-color:#004766;
-    --link-hov-color:#df710b;
+    --link-color: var(--secondary-color);
+    --link-hov-color:var(--additional-color);
     --transition-time: 0.5s;
 
     --form-element-border: var(--primary-color);
-    --form-element-focus: var(--additional-color);
+    --form-element-focus: var(--secondary-color);
     --form-button-background: var(--primary-color);
     --form-button-backgroundhover: var(--secondary-color);
     --form-button-textcolor: var(--white-color);
@@ -135,6 +136,14 @@ summary {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     max-width: 100%;
+}
+
+
+.table-container {
+    /* ↓↓↓ Sonst wird diese Tabelle im Hochformat nicht auf den Bildschirm passen. ↓↓↓*/
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
+max-width: 100%;
 }
 
 summary:hover {
