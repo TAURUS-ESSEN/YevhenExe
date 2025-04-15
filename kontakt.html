@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Projekt Yevhen.exe - Kontakt seite</title>
+    <title>Projekt Yevhen.exe - Kontaktseite</title>
+    <!-- <script src="main.js" defer></script> -->
 </head>
 <body>
     <div class="wrapper">
@@ -19,34 +20,34 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html" title="Home">Home</a></li>
-                    <li class="hasSub"><a href="heute.html" title="Heute">Heute </a>
+                    <li><a href="index.html" title="Startseite">Home</a></li>
+                    <li class="hasSub"><a href="heute.html" title="Heutige Situation">Heute </a>
                         <ul>
-                            <li><a href="heute.html#deutsch" title="Deutsch">Deutsch</a></li>
+                            <li><a href="heute.html#deutsch" title="Deutsch Lernen">Deutsch</a></li>
                             <li><a href="heute.html#weiterbildung" title="Weiterbildung">Weiterbildung</a></li>
-                            <li><a href="heute.html#odin" title="Odin Projekt">Odin Projekt</a></li>
+                            <li><a href="heute.html#odin" title="Odin Projekt Beschreibung">Odin Projekt</a></li>
                         </ul>
                     </li>
-                    <li><a href="zukunft.html" title="Zukunft">Zukunft</a></li>
-                    <li  class="active"><a href="kontakt.html" title="Kontakt" aria-current="page">Kontakt</a></li>
+                    <li><a href="zukunft.html" title="Meine Pläne">Zukunft</a></li>
+                    <li  class="active"><a href="kontakt.html" title="Kontaktseite mit Form" aria-current="page">Kontakt</a></li>
                 </ul>
             </nav>
         </header>
     <main >
             <section class="kontakt">
-        <div class="width60">
+        <div class="w-60">
             <form action="#" class="form">
                 <fieldset class="flex-column">
                     <legend>Kontaktformular</legend>
                     <label for="nachname">Nachname</label>
-                    <input type="text" name="nachname" id="nachname" autocomplete="family-name" minlength="1" maxlength="40"  required>
+                    <input type="text" name="nachname" id="nachname" autocomplete="family-name" minlength="1" maxlength="40" aria-required="true" required>
                     <label for="vorname">Vorname</label>
                     <input type="text" name="vorname" id="vorname" autocomplete="given-name" minlength="1" maxlength="40" >
                     <label for="grund">Grund der Nachricht</label>
-                    <select name="grund" id="grund" required >
+                    <select name="grund" id="grund" aria-required="true" required >
                         <option value="" disabled selected hidden>-- Bitte auswählen --</option>
                         <optgroup label="Ich brauche was">
-                            <option value="geldbitten">Geld (nur ein bisschen… oder mehr)</option>
+                            <option value="geldbitten">Geld (nur ein bisschen)</option>
                             <option value="rat">Weisen Rat (am besten kostenlos)</option>
                         </optgroup>
                         <optgroup label="Ich weiß was besser">
@@ -55,13 +56,14 @@
                         </optgroup>
                     </select>
                     <label for="nachricht">Nachricht (max. 300 Zeichen)</label>
-                    <textarea name="nachricht" id="nachricht" rows="6"  placeholder="Geben Sie bitte Ihre Nachricht ein" minlength="3" maxlength="300" required></textarea>
+                    <textarea name="nachricht" id="nachricht" rows="6" aria-required="true" placeholder="Geben Sie bitte Ihre Nachricht ein" minlength="3" maxlength="300" required></textarea>
                     <button aria-label="Formular absenden" type="submit">Senden</button>
                 </fieldset>
             </form>    
         </div>
-        <div class="width40 kontakt-info">
-            <h1> Kontakt Info</h1>
+        <div class="w-40 kontakt-info">
+            <h1>Kontaktinformationen</h1>
+            <!-- <button id="theme-toggle" class="theme-button"></button> -->
             <div> 
                 <p>
                     E-Mail: <a href="mailto:reitarovea@gmail.com">reitarovea@gmail.com</a><br>
