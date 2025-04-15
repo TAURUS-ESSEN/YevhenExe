@@ -1,28 +1,65 @@
  /* Anordnung / Gestaltung Figure und Kinderelemente*/
- figure{border: 1px solid; padding:1em; max-width:480px;}
- figure ul{display:flex; flex-flow:row wrap;list-style:none;padding:0;}
- /* Opacity für einfachen Hovereffekt*/
- figure li{flex-grow:1;min-width:120px;margin:5px;}
- /* Filter und Opacity verändern den z-index im Zusammenspiel mit Flex-items wird ebenso das Verhalten der Pisitionierungsangaben geändert*/ 
- figure li>a{display:block; opacity:0.8;filter:grayscale(1); transition: .4s ease-in-out }
- figure li>a:is(:hover,:focus-within){opacity:1;filter:grayscale(0)}
- figure a>img{width:100%;height:auto;}
+.gallery figure{
+  /* border: 1px solid;  */
+  padding:1em; 
+  width: 100%;
+  /* max-width:480px;  */
+}
 
- img{
-   background:red;
-   /* WCAG-Regeln für Touch-Icons beachten */
-   /* 
-   min-height:48px;
-   min-width:48px; 
-   */
-   display:inline-block;
- }
- 
- /* verstecken beim laden der Seite*/
- .overlay{
-   position:fixed;
-   background:rgba(0,0,0,0.5);
-   left:-9999em;
+.gallery figcaption {
+  font-size: 1.5em;
+  color: var(--primary-color);
+}
+
+.gallery figure ul{
+  
+  display:flex; 
+  flex-flow:row wrap;
+  justify-content: center;
+  list-style:none;
+  padding:0;
+}
+
+  /* Opacity für einfachen Hovereffekt*/
+.gallery figure li{
+  flex-grow:1;
+  min-width:120px;
+  max-width:250px;
+  margin:5px;
+}
+
+  /* Filter und Opacity verändern den z-index im Zusammenspiel mit Flex-items wird ebenso das Verhalten der Pisitionierungsangaben geändert*/ 
+.gallery figure li>a{
+  display:block; 
+  opacity:0.8;
+  filter:grayscale(1); 
+  transition: .4s ease-in-out 
+}
+
+.gallery figure li>a:is(:hover,:focus-within){
+  opacity:1;
+  filter:grayscale(0)
+}
+
+.gallery figure a>img{
+  width:100%;
+  height:auto;
+}
+
+.gallery img{
+  /* background:red; */
+  min-height:48px;
+  min-width:48px; 
+  display:inline-block;
+  border-radius: 10px ;
+  /* box-shadow: 0 0 5px var(--shadow-mountain); */
+}
+
+/* verstecken beim laden der Seite*/
+.overlay{
+  position:fixed;
+  background:rgba(0,0,0,0.5);
+  left:-9999em;
    /* Horizontales und vertikales zentrieren von Kinderelementen mit flexbox */
    /* display:flex; 
     justify-content:center; */
@@ -36,62 +73,63 @@
 #img5:target~ .overlay, */
 :target~ .overlay,
 [id*="img"]:target,
- .overlay>a{
-   left:0;
-   top:0;
-   right:0;
-   bottom:0;
+.overlay>a{
+  left:0;
+  top:0;
+  right:0;
+  bottom:0;
  }
 
- .overlay>a{
-   position:absolute;
- }
+.overlay>a{
+  position:absolute;
+}
 
- .imgholder{
-   border:2px solid #fff;
-   width:fit-content;
-   position:absolute;
-   left:50%;
-   top:50%; 
-   transform:translate(-50%, -50%);
-   width:70%;
-   /* Horizontales uund Vertikales Zentrieren mit Margin geht nur mit absoluten Maßeinheiten*/
-   /* 
-   margin-left:-452px;
-   margin-top:-302px; 
+.imgholder{
+  /* border:2px solid #fff; */
+  width:fit-content;
+  position:absolute;
+  left:50%;
+  top:50%; 
+  transform:translate(-50%, -50%);
+  /* width:50%; */
+  /* height: auto; */
+  /* Horizontales uund Vertikales Zentrieren mit Margin geht nur mit absoluten Maßeinheiten*/
+  /* 
+  margin-left:-452px;
+  margin-top:-302px; 
    */
    /* display:flex; */
  }
  /* Bild im Container Skalierbar */
- .imgholder>img{
-   width:100%;
-   height:auto;
-   display:block;
- }
+.imgholder>img{
+  width:100%;
+  /* max-width: 100vh; */
+  height:auto;
+  display:block;
+}
 
  /* schließen Link */
- .close{
-   background:#000;
-   color:#fff;
-   width:48px;
-   height:48px;
-   position:absolute;
-   right:-60px;
-   top:-60px;
-   overflow:hidden;
-   text-decoration:none;
- }
+.closeFoto{
+  background:#000;
+  color:#fff;
+  width:48px;
+  height:48px;
+  position:absolute;
+  right:-60px;
+  top:-20px;
+  overflow:hidden;
+  text-decoration:none;
+}
 
- .close:hover{
-   color:orange;
- }
+.closeFoto:hover{
+  color:orange;
+}
 
- .close:before{
-   font-family:arial;
-   text-align:center;
-   content:"X";
-   display:block;
-   font-size:48px;
-   line-height:48px;
- }
- 
+.closeFoto:before{
+  font-family:arial;
+  text-align:center;
+  content:"X";
+  display:block;
+  font-size:48px;
+  line-height:48px;
+}

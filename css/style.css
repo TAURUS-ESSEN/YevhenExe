@@ -274,7 +274,7 @@ nav > ul > li:hover > ul,  .hasSub ul:focus-within  {
 }
 
 .hasSub>a::after {
-    content: ' \2B9F';
+    content: ' \25BC';
     margin-left: 0.2em;
     color: var(--additional-color);
 }
@@ -661,6 +661,11 @@ footer a:hover {
     /* z-index: 0; */
     /* user-select: none; */
   }
+
+  .controls label:hover {
+    color: var(--secondary-color);
+    background-color: rgba(246, 245, 245, 0.59);
+  } 
   
   .controls .next {
     right: 0.5em;
@@ -707,7 +712,7 @@ footer a:hover {
     display: block;
 }
 
-figcaption {
+.figure-slider figcaption {
     position: absolute;
     padding: 0.5em;
     text-align: center;
@@ -803,7 +808,7 @@ figcaption {
     }
 
     .hasSub li a::before { 
-        content: '\2B9A';
+        content: '\25B6';
         margin-right: 0.3em;
     }
  
