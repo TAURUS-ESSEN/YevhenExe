@@ -9,8 +9,11 @@
 }
 
 :root {
+    /* --primary-color:#004766; */
     --primary-color:#004766;
-    --secondary-color: #C15106;
+    --secondary-color: #A30072;
+    /* --secondary-color: #C15106; */
+
     --additional-color: #ff7b00; 
 
     /* --secondary-color: #c45f00; */
@@ -129,11 +132,10 @@ summary {
     font-weight: 600;
     color: var(--link-color);
     /* ↓↓↓ Sonst wird diese Tabelle im Hochformat nicht auf den Bildschirm passen. ↓↓↓*/
-    /* overflow-x: auto;
+    overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    max-width: 100%; */
+    max-width: 100%;
 }
- 
 
 summary:hover {
     color: var(--link-hov-color);
