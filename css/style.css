@@ -2,16 +2,19 @@
     font-family: "Oxanium";
 
     src: url('../fonts/Oxanium-Regular.eot'), 
-        url('../fonts/Oxanium-Regular.eot?#iefix') format('embeded-opentype'),
+        url('../fonts/Oxanium-Regular.eot?#iefix') format('embedded-opentype'),
         url('../fonts/Oxanium-VariableFont.woff2') format("woff2"),
-        url('../fonts/OOxanium-Regular.woff') format("woff2"),
+        url('../fonts/Oxanium-Regular.woff') format("woff2"),
         url('../fonts/Oxanium-Regular.ttf') format("truetype");
 }
 
 :root {
     --primary-color:#004766;
-    --secondary-color: #df710b;
-    --additional-color: #E8F9FF;
+    --secondary-color: #C15106;
+    /* --additional-color: #df710b; */
+
+    /* --secondary-color: #c45f00; */
+    /* --additional-color: #E8F9FF; */
     --white-color: #fff;
 
     --primary-font: 'Oxanium', 'Courier New', Courier, monospace;
@@ -124,13 +127,7 @@ summary {
     -webkit-overflow-scrolling: touch;
     max-width: 100%; */
 }
-
-.table-container {
-        /* ↓↓↓ Sonst wird diese Tabelle im Hochformat nicht auf den Bildschirm passen. ↓↓↓*/
-    /* overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    max-width: 100%; */
-}
+ 
 
 summary:hover {
     color: var(--link-hov-color);
@@ -583,7 +580,7 @@ button:hover, button:focus {
 }
 
 .card:hover{
-    background: linear-gradient(to bottom, #dbf4ff, #ffffff);
+    background: linear-gradient(to bottom, #dbf4ffb1, #ffffff);
 }
 
 .card img {
@@ -625,13 +622,14 @@ footer {
 }
 
 footer a {
-    color: var(--form-button-textcolor); 
+    color: var(--white); 
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: rgb(255, 170, 14);  
+    color: orange ;
+    transform: scale(1.05);
     text-decoration: underline;
 }
 
@@ -682,11 +680,18 @@ footer a:hover {
     /* user-select: none; */
   }
 
-  .controls label:hover {
+  .controls label:hover{
     color: var(--secondary-color);
     background-color: rgba(246, 245, 245, 0.59);
   } 
   
+  .controls label:focus-visible {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
   .controls .next {
     right: 0.5em;
   }

@@ -29,11 +29,18 @@
 }
 
   /* Filter und Opacity verändern den z-index im Zusammenspiel mit Flex-items wird ebenso das Verhalten der Pisitionierungsangaben geändert*/ 
-.gallery figure li>a{
+.gallery figure li > a{
   display:block; 
   opacity:0.8;
   filter:grayscale(1); 
   transition: .4s ease-in-out 
+}
+
+.gallery figure li > a:focus-visible {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 4px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
 }
 
 .gallery figure li>a:is(:hover,:focus-within){
@@ -109,7 +116,7 @@
 }
 
  /* schließen Link */
-.closeFoto{
+.close-photo{
   background:#000;
   color:#fff;
   width:48px;
@@ -121,11 +128,11 @@
   text-decoration:none;
 }
 
-.closeFoto:hover{
+.close-photo:hover{
   color:orange;
 }
 
-.closeFoto:before{
+.close-photo:before{
   font-family:arial;
   text-align:center;
   content:"X";
