@@ -181,6 +181,16 @@ label[for="menu-toggler"]:focus {
     transition: 0.5s;
 }
 
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.logo:hover .cursor-blink {
+    animation: blink 1s step-start infinite;
+}
+  
+
 nav {
     width: 80%;
 }
