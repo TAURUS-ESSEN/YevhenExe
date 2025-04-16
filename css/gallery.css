@@ -1,6 +1,5 @@
  /* Anordnung / Gestaltung Figure und Kinderelemente*/
 .gallery figure{
-  /* border: 1px solid;  */
   padding:1em; 
   width: 100%;
   /* max-width:480px;  */
@@ -54,12 +53,10 @@
 }
 
 .gallery img{
-  /* background:red; */
   min-height:44px;
   min-width:44px; 
   display:inline-block;
   border-radius: 10px ;
-  /* box-shadow: 0 0 5px var(--shadow-mountain); */
 }
 
 /* verstecken beim laden der Seite*/
@@ -92,7 +89,6 @@
 }
 
 .imgholder{
-  /* border:2px solid #fff; */
   width:fit-content;
   position:absolute;
   left:50%;
@@ -143,7 +139,6 @@
 
 @media (max-width: 480px) { 
   .imgholder {
-    /* width: clamp(14em, 16em, 18em); */
     width: 19em;
   }
 

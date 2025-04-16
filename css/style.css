@@ -1,6 +1,5 @@
 @font-face {
-    font-family: "Oxanium";
-
+    font-family: Oxanium;
     src: url('../fonts/Oxanium-Regular.eot'), 
         url('../fonts/Oxanium-Regular.eot?#iefix') format('embedded-opentype'),
         url('../fonts/Oxanium-VariableFont.woff2') format("woff2"),
@@ -14,31 +13,28 @@
     --additional-color: #35D1F8; 
 
     /* --primary-color:#004766; */
+
     /* --secondary-color: #C15106; */
+
     /* --additional-color: #ff7b00;  */
 
     --white-color: #fff;
-    --primary-font: 'Oxanium', 'Courier New', Courier, monospace;
-    --secondary-font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --primary-font: oxanium, 'Courier New', courier, monospace;
+    --secondary-font: 'Franklin Gothic Medium', 'Arial Narrow', arial, sans-serif;
 
     /* nav colors */
     --header-color:  var(--primary-color);
-
     --nav-li: var(--secondary-color);
     --nav-li-hover: var(--additional-color);
     --nav-li-active: var(--white-color);
     --nav-li-text: var(--white-color);
     --nav-li-texthover: var(--secondary-color);
     --nav-li-textactive: var(--primary-color);
-
     --shadow-mountain: #737373b6;
     --black: #000;
     --white: #fff;
-
     --link-color: var(--secondary-color);
     --link-hov-color:var(--additional-color);
-    --transition-time: 0.5s;
-
     --form-element-border: var(--primary-color);
     --form-element-focus: var(--secondary-color);
     --form-button-background: var(--secondary-color);
@@ -89,7 +85,7 @@ a:hover {
 }
 
 a:focus {
-    color: var(--white-color);
+    color: var(--additional-color);
 }
 
 section a:focus {
@@ -112,18 +108,14 @@ section {
 summary {
     font-weight: 600;
     color: var(--link-color);
-    /* ↓↓↓ Sonst wird diese Tabelle im Hochformat nicht auf den Bildschirm passen. ↓↓↓*/
-    /* overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    max-width: 100%; */
 }
 
-.table-container {
-    /* ↓↓↓ Sonst wird diese Tabelle im Hochformat nicht auf den Bildschirm passen. ↓↓↓*/
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    max-width: 100%;
-}
+.w-30 {width: 30%;}
+.w-40 {width: 40%;}
+.w-60 {width: 60%;}
+.w-70 {width: 70%;}
+
+
 
 summary:hover {
     color: var(--link-hov-color);
@@ -141,7 +133,7 @@ summary:hover {
 header {
     display: flex;
     background-color: var(--header-color);
-    box-shadow: 0px 2px 5px var(--shadow-mountain);
+    box-shadow: 0 2px 5px var(--shadow-mountain);
 }
 
 p {
@@ -276,7 +268,7 @@ nav > ul > li:hover > ul,  .hasSub ul:focus-within  {
     top: 100%;
     left: 0;
     padding-top: 1rem;
-    background-color: rgba(0, 0, 0, 0.125);
+    background-color: rgb(0 0 0 / 12.5%);
     opacity: 1;
     transform: translateY(0);
     z-index: 1;
@@ -324,7 +316,7 @@ nav li:hover > a, .hasSub:hover a::after {
     bottom: 125%; 
     left: 50%;
     transform: translateX(-50%);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 5px rgb(0 0 0 / 30%);
     transition: opacity 0.3s ease;
     z-index: 10;
 }
@@ -363,7 +355,7 @@ img.float-l  {
     font-family: 'Courier New', Courier, monospace;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 0 10px #00ff99aa;
+    box-shadow: 0 0 10px #0f9a;
 }
 
 img[src$=".png"],
@@ -376,24 +368,14 @@ img[src$=".gif"]{
     width: 100%;
 }
 
-.flex-wrap {
-    flex-wrap: wrap;
-}
-
-.flex-justifycenter {
-    justify-content: center;
-}
-
-.flex-aligncenter {
-    align-items: center;
-}
-
-.flex-column {
-    display: flex;
-    flex-direction: column;
-}
-
 /****************   Table    ****************/
+.table-container {
+    /* ↓↓↓ Sonst wird diese Tabelle im Hochformat nicht auf den Bildschirm passen. ↓↓↓ */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+}
+
 table {
     border-collapse: collapse;
     margin: 0 auto;
@@ -455,7 +437,7 @@ tr.tr-active {
     margin: 0.5rem;
 }
 
-a:hover svg {
+.kontakt-info a:hover, a:hover svg {
     fill: var(--additional-color);
 }
 
@@ -533,7 +515,7 @@ button {
     display: block;
     width: 150px;
     min-height: 44px;
-    margin: 0em auto;
+    margin: 0 auto;
     border: 0;
     border-radius: 5px;
     background-color: var(--form-button-background);
@@ -595,7 +577,7 @@ ul.impressum {
 }
 
 .card:hover{
-    background: linear-gradient(to bottom, #dbf4ffb1, #ffffff);
+    background: linear-gradient(to bottom, #eaf1f4b1, #fff);
 }
 
 .card img {
@@ -613,6 +595,7 @@ ul.impressum {
     opacity: 1;
     transition: all 200ms ease-in-out;
 }
+
 .card:hover {
     transform: scale(1.01);
     transition: all 200ms ease-in-out;
@@ -653,7 +636,7 @@ ul.impressum {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgb(0 0 0 / 50%);
     color: white;
     font-size: 2rem;
     padding: 0.5em;
@@ -662,13 +645,13 @@ ul.impressum {
 
 .controls label:hover{
     color: var(--secondary-color);
-    background-color: rgba(246, 245, 245, 0.59);
+    background-color: rgb(246 245 245 / 59%);
 } 
 
 .controls label:focus-visible {
     outline: 2px solid var(--secondary-color);
     outline-offset: 4px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgb(255 255 255 / 20%);
     border-radius: 8px;
 }
 
@@ -738,7 +721,7 @@ footer {
     padding: 5px;
     background-color: var(--primary-color);
     color: var(--form-button-textcolor);
-    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.474);
+    box-shadow: 0 -1px 4px rgb(0 0 0 / 47.4%);
     text-align: center;
 }
 
@@ -754,12 +737,9 @@ footer a:hover {
     text-decoration: underline;
 }
 
-.w-30 {width: 30%;}
-.w-40 {width: 40%;}
-.w-60 {width: 60%;}
-.w-70 {width: 70%;}
+/* ************ MEDIA ************** */
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
     label[for="menu-toggler"] {
         display: block;
         margin-right: 1rem;
@@ -830,8 +810,8 @@ footer a:hover {
     nav > ul > li:hover > ul,  .hasSub ul:focus-within {
         top: 100%;
         left: -1rem;
-        padding-top: 0rem;
-        background-color: rgba(0, 0, 0, 0.125);
+        padding-top: 0;
+        background-color: rgb(0 0 0 / 12.5%);
         opacity: 1;
         transform: translateY(0);
     }
@@ -859,8 +839,11 @@ footer a:hover {
     }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
     .float-l, .float-r  {
         float: none;
     }
 }
+
+
+
