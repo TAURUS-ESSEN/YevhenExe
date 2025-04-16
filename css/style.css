@@ -13,9 +13,7 @@
     --additional-color: #35D1F8; 
 
     /* --primary-color:#004766; */
-
     /* --secondary-color: #C15106; */
-
     /* --additional-color: #ff7b00;  */
 
     --white-color: #fff;
@@ -32,7 +30,6 @@
     --nav-li-textactive: var(--primary-color);
     --shadow-mountain: #737373b6;
     --black: #000;
-    --white: #fff;
     --link-color: var(--secondary-color);
     --link-hov-color:var(--additional-color);
     --form-element-border: var(--primary-color);
@@ -54,7 +51,7 @@ body {
 }
 
 html {
-    font-family: var(--primary-font);
+    font-family: var(--primary-font, var(--secondary-font));
     line-height: 1.5;
 }
 
@@ -80,17 +77,8 @@ a {
     color:var(--link-color,inherit);
 }
 
-a:hover {
+a:hover, .logo a:hover, span.tooltip:hover, .kontakt-info a:hover  {
     color:var(--additional-color);
-}
-
-a:focus {
-    /* color: var(--additional-color); */
-    /* outline: 2px solid var(--additional-color);  */
-}
-
-section a:focus {
-    /* color: var(--additional-color); */
 }
 
 img {
@@ -190,7 +178,6 @@ label[for="menu-toggler"]:focus {
 }
 
 .logo a:hover {
-    color: var(--additional-color);
     font-size: 1.5em;
     text-decoration: none;
     transition: 0.5s;
@@ -327,10 +314,6 @@ nav li:hover > a, .hasSub:hover a::after {
     opacity: 1;
 }
 
-span.tooltip:hover {
-    color: var(--additional-color);
-}
-
 .float-l {
     float: left;
     padding: 0.5rem 1rem;
@@ -349,14 +332,6 @@ img.float-l  {
     content: "";
     display: table;
     clear: both;
-}
-
-.alien-text {
-    background-color: var(--light-color);
-    font-family: 'Courier New', Courier, monospace;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px #0f9a;
 }
 
 img[src$=".png"],
@@ -430,15 +405,11 @@ tr.tr-active {
     color: var(--white-color);
 }
 
-.kontakt-info a:hover {
-    color: var(--additional-color);
-}
-
 .kontakt-icons a {
     margin: 0.5rem;
 }
 
-.kontakt-info a:hover, a:hover svg {
+a:hover svg {
     fill: var(--additional-color);
 }
 
@@ -450,7 +421,6 @@ address {
 .form {
     max-width: 600px;
     margin: 0 auto;
-    font-family: var(--primary-font, var(--secondary-font));
     padding: 0.5em;
 }
 
@@ -578,7 +548,7 @@ ul.impressum {
 }
 
 .card:hover{
-    background: linear-gradient(to bottom, #eaf1f4b1, #fff);
+    background: linear-gradient(to bottom, #eaf1f4b1, var(--white-color));
 }
 
 .card img {
@@ -698,7 +668,7 @@ ul.impressum {
     text-align: center;
     width: 100%;
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--white-color);
     font-size: 1em;
 }
 
@@ -733,7 +703,6 @@ footer a {
 }
 
 footer a:hover {
-    color: var(--additional-color);
     transform: scale(1.05);
     text-decoration: underline;
 }
