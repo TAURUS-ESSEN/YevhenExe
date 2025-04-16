@@ -85,11 +85,12 @@ a:hover {
 }
 
 a:focus {
-    color: var(--additional-color);
+    /* color: var(--additional-color); */
+    /* outline: 2px solid var(--additional-color);  */
 }
 
 section a:focus {
-    color: var(--additional-color);
+    /* color: var(--additional-color); */
 }
 
 img {
@@ -246,7 +247,7 @@ nav a:focus {
 }
 
 nav li:focus-within {
-    outline: 3px solid var(--black);
+    outline: 3px solid var(--additional-color);
     z-index: 2;  
 }
 
