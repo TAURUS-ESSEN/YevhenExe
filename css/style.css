@@ -372,14 +372,14 @@ caption {
 }
 
 th, td {
-    border: 1px solid var(--form-element-border);
+    border: 1px solid var(--primary-color);
     padding: 0.2em;
     text-align: left;
 }
 
 th {
-    background-color: var(--header-color);
-    color: var(--form-button-textcolor);
+    background-color: var(--primary-color);
+    color: var(--text-on-dark-bg);
 }
 
 tr:nth-child(even) {
@@ -387,8 +387,8 @@ tr:nth-child(even) {
 }
 
 tr.tr-active {
-    background-color: var(--form-button-backgroundhover);
-    color: var(--form-button-textcolor);
+    background-color: var(--additional-color);
+    color: var(--text-on-hell-bg);
 }
 
 /************  KONTAKT SEITE  ************/
