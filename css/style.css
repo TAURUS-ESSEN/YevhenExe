@@ -147,6 +147,7 @@ header {
 p {
     word-break: break-word;
     hyphens: auto;
+    padding-bottom: 0.3em;
 }
 
 /* HAMBURGER */
