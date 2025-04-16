@@ -41,8 +41,8 @@
 
     --form-element-border: var(--primary-color);
     --form-element-focus: var(--secondary-color);
-    --form-button-background: var(--primary-color);
-    --form-button-backgroundhover: var(--secondary-color);
+    --form-button-background: var(--secondary-color);
+    --form-button-backgroundhover: var(--additional-color);
     --form-button-textcolor: var(--white-color);
 }
 
@@ -78,14 +78,14 @@ main {
     padding: 1em;
 }
 
-a{
+a {
     display:inline-block;
     font-weight: 700;
     color:var(--link-color,inherit);
 }
 
-a:hover{
-    color:var(--link-hov-color);
+a:hover {
+    color:var(--additional-color);
 }
 
 a:focus {
@@ -113,16 +113,16 @@ summary {
     font-weight: 600;
     color: var(--link-color);
     /* ↓↓↓ Sonst wird diese Tabelle im Hochformat nicht auf den Bildschirm passen. ↓↓↓*/
-    overflow-x: auto;
+    /* overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    max-width: 100%;
+    max-width: 100%; */
 }
 
 .table-container {
     /* ↓↓↓ Sonst wird diese Tabelle im Hochformat nicht auf den Bildschirm passen. ↓↓↓*/
-    /* overflow-x: auto;
+    overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    max-width: 100%; */
+    max-width: 100%;
 }
 
 summary:hover {
@@ -296,7 +296,7 @@ li.active {
     color: var(--nav-li-textactive);
 }
 
-li:hover > a, .hasSub:hover a::after {
+nav li:hover > a, .hasSub:hover a::after {
     color: var(--nav-li-texthover);
 }
 
@@ -355,6 +355,14 @@ img.float-l  {
     content: "";
     display: table;
     clear: both;
+}
+
+.alien-text {
+    background-color: var(--light-color);
+    font-family: 'Courier New', Courier, monospace;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #00ff99aa;
 }
 
 img[src$=".png"],
@@ -611,6 +619,8 @@ ul.impressum {
 
 .card-info {
     padding: 1em;
+    max-height: 170px;
+    overflow: hidden;
 }
 
  /************  Ersatz Slider ************/
