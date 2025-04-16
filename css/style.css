@@ -16,7 +16,8 @@
     /* --secondary-color: #C15106; */
     /* --additional-color: #ff7b00;  */
 
-    --white-color: #fff;
+    --text-on-dark-bg: #fff;
+    --text-on-hell-bg: #2E2E2E;
     --primary-font: oxanium, 'Courier New', courier, monospace;
     --secondary-font: 'Franklin Gothic Medium', 'Arial Narrow', arial, sans-serif;
 
@@ -24,9 +25,9 @@
     --header-color:  var(--primary-color);
     --nav-li: var(--secondary-color);
     --nav-li-hover: var(--additional-color);
-    --nav-li-active: var(--white-color);
-    --nav-li-text: var(--white-color);
-    --nav-li-texthover: var(--secondary-color);
+    --nav-li-active: var(--text-on-dark-bg);
+    --nav-li-text: var(--text-on-dark-bg);
+    --nav-li-texthover: var(--text-on-hell-bg);
     --nav-li-textactive: var(--primary-color);
     --shadow-mountain: #737373b6;
     --black: #000;
@@ -36,7 +37,7 @@
     --form-element-focus: var(--secondary-color);
     --form-button-background: var(--secondary-color);
     --form-button-backgroundhover: var(--additional-color);
-    --form-button-textcolor: var(--white-color);
+    --form-button-textcolor: var(--text-on-dark-bg);
 }
 
 *{
@@ -46,7 +47,6 @@
 }
 
 body {
-    background-color: var(--white-color);
     background-image: url('../img/noise_lines.webp');
 }
 
@@ -116,7 +116,7 @@ summary:hover {
     max-width:var(--wrapper,1200px);
     margin: 0 auto;
     box-shadow: 0 0 5px var(--shadow-mountain)  ;
-    background-color: var(--white-color); 
+    background-color: var(--text-on-dark-bg); 
 }
 
 header {
@@ -135,7 +135,7 @@ p {
 .close{
     display:none;
     font-size: 2.2rem;
-    color: var(--white-color);
+    color: var(--text-on-dark-bg);
 }
 
 input:checked ~ label .close {
@@ -154,7 +154,7 @@ label[for="menu-toggler"] {
     display: none;
     cursor: pointer;
     font-size: 2.2rem;
-    color: var(--white-color);
+    color: var(--text-on-dark-bg);
     transform: scaleX(1.3);
 }
 
@@ -172,14 +172,12 @@ label[for="menu-toggler"]:focus {
 }
 
 .logo a {
-    color: var(--white-color);
+    color: var(--text-on-dark-bg);
     font-size: 1.5em;
     text-decoration: none;
 }
 
 .logo a:hover {
-    font-size: 1.5em;
-    text-decoration: none;
     transition: 0.5s;
 }
 
@@ -225,7 +223,7 @@ nav li a, .hasSub a{
 
 nav li:hover, .hasSub:hover::after {
     background-color: var(--nav-li-hover);
-    background-image: url('../img/noise_lines.webp');
+    /* background-image: url('../img/noise_lines.webp'); */
     transition: 0.5s;
 }
 
@@ -265,7 +263,7 @@ nav > ul > li:hover > ul,  .hasSub ul:focus-within  {
 .hasSub>a::after {
     content: ' \25BC';
     margin-left: 0.2em;
-    color: var(--white-color);
+    color: var(--text-on-dark-bg);
 }
 
 li.active {
@@ -295,7 +293,7 @@ nav li:hover > a, .hasSub:hover a::after {
     width: max-content;
     max-width: 250px;
     background-color: var(--primary-color);
-    color:var(--white-color);
+    color:var(--text-on-dark-bg);
     font-weight: 600;
     text-align: left;
     padding: 0.5em;
@@ -398,11 +396,11 @@ tr.tr-active {
     align-items: center;
     background-color: var(--primary-color);
     border-radius: 15px;
-    color: var(--white-color);
+    color: var(--text-on-dark-bg);
 }
 
 .kontakt-info a, .kontakt-info h1 {
-    color: var(--white-color);
+    color: var(--text-on-dark-bg);
 }
 
 .kontakt-icons a {
@@ -516,7 +514,7 @@ ul.impressum {
 }
 
 .active-impressum {
-    background-color: var(--white-color);
+    background-color: var(--text-on-dark-bg);
     background-image: url('../img/noise_lines.webp');
     color: var(--primary-color);
     height: 30px;
@@ -542,13 +540,12 @@ ul.impressum {
     align-items: center;
     max-width: 20rem;
     margin-bottom: 2rem;
-    transition: all 200ms ease-in-out;
     border-radius: 5px;
     box-shadow: 0 0 0.5em var(--shadow-mountain);
 }
 
 .card:hover{
-    background: linear-gradient(to bottom, #eaf1f4b1, var(--white-color));
+    background: linear-gradient(to bottom, #eaf1f4b1, var(--text-on-dark-bg));
 }
 
 .card img {
@@ -558,24 +555,28 @@ ul.impressum {
     border-radius: 0.2em 0.2em 0 0;
     filter: grayscale();
     opacity: 0.7;
-    transition: all 300ms ease-out;
 }
 
 .card:hover img {
     filter: none;
     opacity: 1;
-    transition: all 200ms ease-in-out;
 }
 
 .card:hover {
     transform: scale(1.01);
-    transition: all 200ms ease-in-out;
 }
 
 .card-info {
     padding: 1em;
     max-height: 170px;
     overflow: hidden;
+}
+
+.card,
+.card:hover,
+.card img,
+.card:hover img {
+    transition: all 200ms ease-in-out;
 }
 
  /************  Ersatz Slider ************/
@@ -608,7 +609,7 @@ ul.impressum {
     top: 50%;
     transform: translateY(-50%);
     background-color: rgb(0 0 0 / 50%);
-    color: white;
+    color: var(--text-on-dark-bg);
     font-size: 2rem;
     padding: 0.5em;
     cursor: pointer;
@@ -668,7 +669,7 @@ ul.impressum {
     text-align: center;
     width: 100%;
     background-color: var(--primary-color);
-    color: var(--white-color);
+    color: var(--text-on-dark-bg);
     font-size: 1em;
 }
 
@@ -697,7 +698,7 @@ footer {
 }
 
 footer a {
-    color: var(--white-color); 
+    color: var(--text-on-dark-bg); 
     font-weight: bold;
     transition: color 0.3s ease;
 }
@@ -744,7 +745,7 @@ footer a:hover {
     }
 
     nav li  {
-        border-bottom: 1px solid var(--white-color);
+        border-bottom: 1px solid var(--text-on-dark-bg);
         width: 100%;
     }
     
@@ -764,12 +765,12 @@ footer a:hover {
         opacity: 1;
         left:-1em;
         align-items: center;
-        background-color: var(--white-color);
+        background-color: var(--text-on-dark-bg);
         transform: translateY(0);
     }
 
     .hasSub li {
-        border-bottom: 1px solid var(--white-color);
+        border-bottom: 1px solid var(--text-on-dark-bg);
         padding: 0.3em ;
     }
 
@@ -787,7 +788,7 @@ footer a:hover {
     }
 
     .hasSub ul li {
-        border-bottom: 1px solid var(--white-color);
+        border-bottom: 1px solid var(--text-on-dark-bg);
     }
 
     .hasSub li a::before { 
